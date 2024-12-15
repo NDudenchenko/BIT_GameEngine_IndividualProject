@@ -24,5 +24,11 @@ namespace DroneExplorer
         public int team;
         public float dammage;
 
+        public Collider selfCollider;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("sssssssssssssss");
+        }
     }
 }

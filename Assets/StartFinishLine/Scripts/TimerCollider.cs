@@ -22,8 +22,10 @@ public class TimerCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Collider works !!!!");
-        CollideWithPlayer();
-
+        if (other == PlayerCollider)
+        {
+            CollideWithPlayer();
+            Destroy(this.gameObject);
+        }
     }
 }

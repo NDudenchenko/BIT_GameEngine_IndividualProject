@@ -30,7 +30,7 @@ public class TimerScript : MonoBehaviour
                 secondsCount = 0;
             }
 
-            Debug.Log(minuteCount + "m:" + (int)secondsCount + "s");
+            //Debug.Log(minuteCount + "m:" + (int)secondsCount + "s");
 
             TimerText.text = minuteCount + "m:" + (int)secondsCount + "s";
         }
@@ -38,13 +38,6 @@ public class TimerScript : MonoBehaviour
         {
             secondsCount = 0;
             minuteCount = 0;
-        }
-    }
-    public void OnColliderTriggered(Collider other)
-    {
-        if (other == StartCollider)
-        {
-
         }
     }
 
@@ -56,5 +49,7 @@ public class TimerScript : MonoBehaviour
     public void OnFinishColliderTriggered()
     {
         isCounterWorks = false;
+
+        //Finish points score !
     }
 }
