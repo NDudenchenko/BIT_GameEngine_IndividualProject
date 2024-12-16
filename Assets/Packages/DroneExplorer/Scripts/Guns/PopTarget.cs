@@ -42,6 +42,7 @@ namespace DroneExplorer
 
         public HitTaker[] takers;           // hit takers
         public float maxDammage;            // maximum dammage before fragmenting.
+        public PointsScore scoreObject;
 
         // Start is called before the first frame update
         void Start()
@@ -125,6 +126,11 @@ namespace DroneExplorer
                 // check damage counter for destruction state
                 if (dammage >= maxDammage)
                 {
+                    if (scoreObject != null)
+                    {
+                        scoreObject.AddPoints(1);
+                    }
+
                     // start fragment counter
                     fragTime = 0;
                     // set initial velocity

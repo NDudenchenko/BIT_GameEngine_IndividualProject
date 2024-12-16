@@ -219,6 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7840490886815742900}
   - component: {fileID: 7840490886815742901}
+  - component: {fileID: 1193208669137444360}
   m_Layer: 0
   m_Name: PopupTarget_Custom
   m_TagString: Untagged
@@ -276,6 +277,27 @@ MonoBehaviour:
   takers:
   - {fileID: 7840490887697716730}
   maxDammage: 0.5
+--- !u!65 &1193208669137444360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7840490886815742899}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.85, y: 0.85, z: 0.11}
+  m_Center: {x: 0, y: 0.8, z: -0.02}
 --- !u!1 &7840490887248402632
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   dammage: 0
+  selfCollider: {fileID: 0}
 --- !u!1 &7891683896438784014
 GameObject:
   m_ObjectHideFlags: 0

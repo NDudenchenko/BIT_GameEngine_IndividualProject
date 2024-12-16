@@ -7,7 +7,14 @@ public class TimerScript : MonoBehaviour
 {
     public TimerCollider StartCollider;
     public TimerCollider FinishCollider;
+
     public TextMeshProUGUI TimerText;
+    public TextMeshProUGUI EndTimerText;
+    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI EndScoreText;
+
+    public GameObject PlayerUI;
+    public GameObject PlayerEndUI;
 
     private float secondsCount;
     private int minuteCount;
@@ -30,8 +37,6 @@ public class TimerScript : MonoBehaviour
                 secondsCount = 0;
             }
 
-            //Debug.Log(minuteCount + "m:" + (int)secondsCount + "s");
-
             TimerText.text = minuteCount + "m:" + (int)secondsCount + "s";
         }
         else
@@ -50,6 +55,10 @@ public class TimerScript : MonoBehaviour
     {
         isCounterWorks = false;
 
-        //Finish points score !
+        EndTimerText.text = TimerText.text;
+        EndScoreText.text = ScoreText.text;
+
+        PlayerUI.SetActive(false);
+        PlayerEndUI.SetActive(true);
     }
 }

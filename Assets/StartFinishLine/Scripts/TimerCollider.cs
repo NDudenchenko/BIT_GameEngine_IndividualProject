@@ -7,6 +7,7 @@ public class TimerCollider : MonoBehaviour
     public delegate void EventHandler();
     public event EventHandler CollideWithPlayer;
     public Collider PlayerCollider;
+    public bool isFinishCollider = false;
 
     // Start is called before the first frame update
     void Start()
